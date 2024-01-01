@@ -106,7 +106,7 @@ function SlideImage() {
         style={{ height }}
         className=" bg-background-red relative mt-[100px]"
       >
-        <div className="h-[1550%] w-[120%] -left-[10%] rounded-[0 0 50% 50%] bg-background-red z-[1] absolute shadow" />
+        <div className="h-[1550%] w-[120%] -left-[10%] rounded-b-[50%] bg-background-1 z-[1] absolute shadow-2xl" />
       </motion.div>
     </div>
   );
