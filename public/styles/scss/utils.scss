@@ -1,0 +1,138 @@
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.custom-transition {
+  transition-timing-function: ease-in;
+  transition-property: all;
+}
+
+.loading {
+  /* Loading Animation */
+  @keyframes loading {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  overflow: hidden;
+
+  position: relative;
+
+  background-color: var(--neutral-4);
+
+  &::after {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(transparent),
+      color-stop(rgba(255, 255, 255, 0.4)),
+      to(transparent)
+    );
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+
+    transform: translateX(-100%);
+
+    /* Adding animation */
+    animation: loading 0.8s infinite;
+  }
+}
+
+.rc-pagination {
+  button {
+    outline: none;
+  }
+
+  &-item,
+  &-prev,
+  &-next {
+    @apply text-body-regular rounded-lg;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 32px;
+    min-height: 32px;
+    border: 1px solid var(--neutral-4);
+
+    cursor: pointer;
+  }
+
+  &-item-active {
+    border-color: var(--primary-6);
+
+    background: var(--primary-6);
+    color: var(--background-1);
+  }
+
+  &-disabled {
+    background-color: var(--neutral-4);
+  }
+}
+
+.svg {
+  svg {
+    @apply w-full h-full;
+  }
+
+  &-custom {
+    * {
+      fill: var(--fill);
+
+      fill-opacity: var(--fill-opa);
+    }
+  }
+}
+
+#nprogress .bar {
+  height: 3px !important;
+
+  background: var(--primary-6) !important;
+}
+
+#nprogress .peg {
+  box-shadow:
+    0 0 10px var(--primary-6),
+    0 0 5px var(--primary-6) !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: var(--primary-6) !important;
+  border-left-color: var(--primary-6) !important;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.thead-row,
+.tbody-row {
+  @apply whitespace-nowrap align-middle;
+
+  > * {
+    padding: 0.75rem;
+  }
+}

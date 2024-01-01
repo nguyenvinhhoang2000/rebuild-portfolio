@@ -1,0 +1,43 @@
+.CardProject {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 50px 100px 50px 100px;
+  border-top: 1px solid rgb(201, 201, 201);
+
+  cursor: pointer;
+  transition: all 0.2s;
+
+  h2 {
+    margin: 0px;
+
+    font-weight: 400;
+    font-size: 60px;
+
+    transition: all 0.4s;
+  }
+
+  p {
+    font-weight: 300;
+
+    transition: all 0.4s;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid rgb(201, 201, 201);
+  }
+
+  &:hover {
+    opacity: 0.5;
+
+    h2 {
+      transform: translateX(-10px);
+    }
+
+    p {
+      transform: translateX(10px);
+    }
+  }
+}

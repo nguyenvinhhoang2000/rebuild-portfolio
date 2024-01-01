@@ -1,0 +1,39 @@
+.Burger {
+  @apply block relative h-full w-full rounded-full;
+
+  &::before,
+  &::after {
+    @apply block absolute w-7 bg-background-1 rounded-sm;
+
+    height: 1px;
+
+    left: 50%;
+
+    transition: all 0.3s ease-out;
+    transform: translate(-50%);
+  }
+
+  &::before {
+    content: "";
+    top: calc(50% - 6px);
+  }
+
+  &::after {
+    content: "";
+    top: calc(50% + 6px);
+  }
+}
+
+.Active {
+  &:before {
+    top: 50%;
+
+    transform: translate(-50%) rotate(225deg);
+  }
+
+  &:after {
+    top: 50%;
+
+    transform: translate(-50%) rotate(315deg);
+  }
+}
