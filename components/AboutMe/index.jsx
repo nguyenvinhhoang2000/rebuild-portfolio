@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
@@ -5,9 +7,10 @@ import Button from "@/components/Button";
 
 import { ANIMATION_ABOUT_ME_SLIDE_UP } from "@/constants/animate";
 
+const phrase =
+  "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
+
 function AboutMe() {
-  const phrase =
-    "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
   const description = useRef(null);
   const isInView = useInView(description);
 
